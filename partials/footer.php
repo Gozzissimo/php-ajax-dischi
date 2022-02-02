@@ -1,4 +1,4 @@
 <footer class="flex">
-    <div class="credit">Credits</div>
-    <div class="credit">Credits</div>
+    <div class="credit">Contacts</div>
+    <div class="credit">Copyright</div>
 </footer>
