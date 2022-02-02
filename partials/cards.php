@@ -2,15 +2,16 @@
     include __DIR__ . '/../server/db.php';
 ?>
 
-<template>
+<?php
+foreach ($albums as $value) { ?>
     <li class="card flex">
-        <div class="card-img">
-            <img :src="image" :alt="imageAlt">
-        </div>
-        <div class="card-txt text-center">
-            <h2 class="album">{{ heading2 }}</h2>
-            <h3 class="artist">{{ heading3 }}</h3>
-            <h4 class="year">{{ heading4 }}</h4>
-        </div>
-    </li>
-</template>
+            <div class="card-img">
+                <img src="<?php echo($value["poster"]) ?>" :alt="">
+            </div>
+            <div class="card-txt text-center">
+                <h2 class="album"><?php echo($value["title"]) ?></h2>
+                <h3 class="artist"><?php echo($value["author"]) ?></h3>
+                <h4 class="year"><?php echo($value["year"]) ?></h4>
+            </div>
+        </li>
+<?php } ?>
