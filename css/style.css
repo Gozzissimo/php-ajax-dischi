@@ -1,0 +1,105 @@
+:root {
+    --light-bg-color: #2E3A46;
+    --dark-bg-Color: #1E2D3B;
+    --grey-font-Color: #7e8081;
+    --white-font-Color: #ffff;
+}
+
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+/* commons */
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+/* header */
+header {
+    background-color: var(--light-bg-color);
+    align-items: center;
+    padding: 1em;
+}
+
+header img {
+    width: 3em;
+}
+
+/* main */
+main {
+    background-color: var(--dark-bg-Color);
+}
+
+main .container {
+    flex-wrap: wrap;
+    padding: 4em 0;
+}
+
+/* cards */
+.card {
+    background-color: var(--light-bg-color);
+    margin: 1em;
+    flex-basis: calc((100% / 5) - 2em);
+    flex-direction: column;
+    align-items: center;
+}
+        
+.card .card-img {
+    width: 150px;
+    height: 150px;
+    margin: 1em;
+}
+
+.card .card-img img {
+    width: 100%;
+}
+
+.card-txt {
+    margin: 1em;
+}
+
+.card-txt .album {
+    color: var(--white-font-Color);
+}
+
+.card-txt .artist, .year {
+    color: var(--grey-font-Color);
+    font-size: 0.8em;
+}
+
+/* footer */
+footer {
+    background-color: var(--light-bg-color);
+    padding: 1em;
+    justify-content: space-between;
+    color: var(--white-font-Color);
+}
+
+footer .credit {
+    font-size: 0.6em;
+}
