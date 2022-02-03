@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <title>php Dischi</title>
 </head>
 
@@ -21,14 +24,14 @@
     <!-- main -->
     <main id="app">
         <ul class="container flex" >
-            <li v-for="album in albumList" class="card flex">
+            <li v-for="card in cards" class="card flex">
                 <div class="card-img">
-                    <img :src="poster" :alt="title">
+                    <img :src="card.poster" :alt="card.title">
                 </div>
                 <div class="card-txt text-center">
-                    <h2 class="album">{{ title }}</h2>
-                    <h3 class="artist">{{ author }}</h3>
-                    <h4 class="year">{{ year }}</h4>
+                    <h2 class="album">{{ card.title }}</h2>
+                    <h3 class="artist">{{ card.author }}</h3>
+                    <h4 class="year">{{ card.year }}</h4>
                 </div>
             </li>
         </ul>
@@ -36,10 +39,9 @@
 
     <!-- footer -->
     <?php include_once __DIR__ . '/partials/footer.php' ?>
-</body>
 
-<!-- js -->
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/script.js"></script>
+    <!-- js -->
+    <script src="js/script.js"></script>
+</body>
 
 </html>
